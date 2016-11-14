@@ -31,5 +31,5 @@ echo " $ ps aux | grep [n]ginx"
 ps aux | grep [n]ginx
 
 echo " "
-echo " * Starting Python app ..."
-python app.py 2>> /dev/stderr 1>> /dev/stdout
+echo " * Starting httpbin app ..."
+gunicorn -b 127.0.0.1:8080 httpbin:app 2>> /dev/stderr 1>> /dev/stdout

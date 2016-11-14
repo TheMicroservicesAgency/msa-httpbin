@@ -1,7 +1,7 @@
 
 # msa-httpbin
 
-Example of a microservice written in Python, with the [Flask](flask.pocoo.org/docs/latest/quickstart/) framework.
+HTTP request & response service originally created by Kenneth Reitz.
 
 ## Usage
 
@@ -14,7 +14,7 @@ To build the microservice Docker image, execute the build script :
 Once the container is created, executed it with the following command :
 
 ```
-docker run -ti -p 8080:80 msa-template-python:1.0.0
+docker run -ti -p 8080:80 msa-httpbin:1.0.0
 ```
 
 ## Endpoints
@@ -39,4 +39,4 @@ docker run -ti -p 8080:80 msa-template-python:1.0.0
 
 ## About
 
-A project by the [Microservices Agency](http://microservices.agency).
+A project by the [Microservices Agency](https://microservices.agency).
