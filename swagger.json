@@ -1,17 +1,723 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "1.0.0",
-        "title": "msa-template-python",
-        "description": "An exmple of a simple Python microservice"
+        "title": "MSA-HTTPBIN",
+        "description": "HTTP request & response service originally created by Kenneth Reitz.",
+        "version": "1.0.0"
     },
+    "produces": [
+        "application/json"
+    ],
     "paths": {
-        "/hello-world": {
+        "/ip": {
             "get": {
-                "description": "Returns \"Hello world\"\n",
+                "summary": "Return the origin IP",
                 "responses": {
                     "200": {
-                        "description": "Successful response"
+                        "description": "the origin IP"
+                    }
+                }
+            }
+        },
+        "/user-agent": {
+            "get": {
+                "summary": "Return the user-agent",
+                "responses": {
+                    "200": {
+                        "description": "the user-agent"
+                    }
+                }
+            }
+        },
+        "/headers": {
+            "get": {
+                "summary": "Return the headers",
+                "responses": {
+                    "200": {
+                        "description": "the headers"
+                    }
+                }
+            }
+        },
+        "/get": {
+            "get": {
+                "summary": "Return get data",
+                "responses": {
+                    "200": {
+                        "description": "get data"
+                    }
+                }
+            }
+        },
+        "/post": {
+            "post": {
+                "summary": "Return post data",
+                "responses": {
+                    "200": {
+                        "description": "post data"
+                    }
+                }
+            }
+        },
+        "/patch": {
+            "patch": {
+                "summary": "Return patch data",
+                "responses": {
+                    "200": {
+                        "description": "patch data"
+                    }
+                }
+            }
+        },
+        "/put": {
+            "put": {
+                "summary": "Return put data",
+                "responses": {
+                    "200": {
+                        "description": "put data"
+                    }
+                }
+            }
+        },
+        "/delete": {
+            "delete": {
+                "summary": "Return delete data",
+                "responses": {
+                    "200": {
+                        "description": "delete data"
+                    }
+                }
+            }
+        },
+        "/encoding/utf8": {
+            "get": {
+                "summary": "Return a page containing UTF-8 data",
+                "responses": {
+                    "200": {
+                        "description": "a page containing UTF-8 data"
+                    }
+                }
+            }
+        },
+        "/deflate": {
+            "get": {
+                "summary": "Return deflate-encoded data",
+                "responses": {
+                    "200": {
+                        "description": "deflate-encoded data"
+                    }
+                }
+            }
+        },
+        "/status/{code}": {
+            "get": {
+                "summary": "Return the given HTTP Status code",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "a given HTTP Status code",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the given HTTP Status code"
+                    }
+                }
+            }
+        },
+        "/response-headers": {
+            "get": {
+                "summary": "Return the given HTTP response headers",
+                "parameters": [
+                    {
+                        "name": "key",
+                        "in": "query",
+                        "type": "string",
+                        "description": "a given HTTP response headers",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the given HTTP response headers"
+                    }
+                }
+            }
+        },
+        "/redirect/{n}": {
+            "get": {
+                "summary": "302 redirects n times",
+                "parameters": [
+                    {
+                        "name": "n",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "the number of times to redirect",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "302": {
+                        "description": "the redirect"
+                    }
+                }
+            }
+        },
+        "/redirect-to": {
+            "get": {
+                "summary": "redirects to the given url, with the given status code",
+                "parameters": [
+                    {
+                        "name": "url",
+                        "in": "query",
+                        "type": "string",
+                        "description": "the url where to redirect",
+                        "required": true
+                    },
+                    {
+                        "name": "status_code",
+                        "in": "query",
+                        "type": "string",
+                        "description": "the optionnal status code (defaults to 302)",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "302": {
+                        "description": "the redirect"
+                    }
+                }
+            }
+        },
+        "/relative-redirect/{n}": {
+            "get": {
+                "summary": "302 redirects n times",
+                "parameters": [
+                    {
+                        "name": "n",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "the number of times to redirect",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "302": {
+                        "description": "the redirect"
+                    }
+                }
+            }
+        },
+        "/absolute-redirect/{n}": {
+            "get": {
+                "summary": "302 redirects n times",
+                "parameters": [
+                    {
+                        "name": "n",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "the number of times to redirect",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "302": {
+                        "description": "the redirect"
+                    }
+                }
+            }
+        },
+        "/cookies": {
+            "get": {
+                "summary": "returns cookie data",
+                "responses": {
+                    "200": {
+                        "description": "cookie data"
+                    }
+                }
+            }
+        },
+        "/cookies/set": {
+            "get": {
+                "summary": "set one or more simple cookies",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "type": "string",
+                        "description": "the cookie name, to set as value",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "cookie data"
+                    }
+                }
+            }
+        },
+        "/cookies/delete": {
+            "get": {
+                "summary": "delete one or more simple cookies",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "type": "string",
+                        "description": "the name of the cookie to delete",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "cookie deleted"
+                    }
+                }
+            }
+        },
+        "/basic-auth/{user}/{passwd}": {
+            "get": {
+                "summary": "challenges HTTPBasic Auth",
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "type": "string",
+                        "description": "the username",
+                        "required": true
+                    },
+                    {
+                        "name": "passwd",
+                        "in": "path",
+                        "type": "string",
+                        "description": "the password",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "challenge passed"
+                    }
+                }
+            }
+        },
+        "/hidden-basic-auth/{user}/{passwd}": {
+            "get": {
+                "summary": "404'd BasicAuth",
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "type": "string",
+                        "description": "the username",
+                        "required": true
+                    },
+                    {
+                        "name": "passwd",
+                        "in": "path",
+                        "type": "string",
+                        "description": "the password",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "404": {
+                        "description": "404'd BasicAuth"
+                    }
+                }
+            }
+        },
+        "/digest-auth/{qop}/{user}/{passwd}/{algorithm}": {
+            "get": {
+                "summary": "404'd BasicAuth",
+                "parameters": [
+                    {
+                        "name": "qop",
+                        "in": "path",
+                        "type": "string",
+                        "description": "the username",
+                        "required": true
+                    },
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "type": "string",
+                        "description": "the username",
+                        "required": true
+                    },
+                    {
+                        "name": "passwd",
+                        "in": "path",
+                        "type": "string",
+                        "description": "the password",
+                        "required": true
+                    },
+                    {
+                        "name": "algorithm",
+                        "in": "path",
+                        "type": "string",
+                        "description": "the algorithm to use",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "404": {
+                        "description": "404'd BasicAuth"
+                    }
+                }
+            }
+        },
+        "/digest-auth/{qop}/{user}/{passwd}": {
+            "get": {
+                "summary": "challenges HTTP Digest Auth",
+                "parameters": [
+                    {
+                        "name": "qop",
+                        "in": "path",
+                        "type": "string",
+                        "description": "the username",
+                        "required": true
+                    },
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "type": "string",
+                        "description": "the username",
+                        "required": true
+                    },
+                    {
+                        "name": "passwd",
+                        "in": "path",
+                        "type": "string",
+                        "description": "the password",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "404": {
+                        "description": "challenges HTTP Digest Auth"
+                    }
+                }
+            }
+        },
+        "/stream/{n}": {
+            "get": {
+                "summary": "streams min(n, 100) lines",
+                "parameters": [
+                    {
+                        "name": "n",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "the number of JSON text lines to return",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "lines of JSON text"
+                    }
+                }
+            }
+        },
+        "/deplay/{n}": {
+            "get": {
+                "summary": "delays responding for min(n, 10) seconds",
+                "parameters": [
+                    {
+                        "name": "n",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "the number of seconds to wait",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a stream of data"
+                    }
+                }
+            }
+        },
+        "/drip": {
+            "get": {
+                "summary": "delays responding for min(n, 10) seconds",
+                "parameters": [
+                    {
+                        "name": "numbytes",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "the number of bytes to stream",
+                        "required": true
+                    },
+                    {
+                        "name": "duration",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "stream duration",
+                        "required": true
+                    },
+                    {
+                        "name": "delay",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "the response delay",
+                        "required": true
+                    },
+                    {
+                        "name": "code",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "the response status code",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a stream of data"
+                    }
+                }
+            }
+        },
+        "/range/{n}": {
+            "get": {
+                "summary": "delays responding for min(n, 10) seconds",
+                "parameters": [
+                    {
+                        "name": "n",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "the number of bytes to stream",
+                        "required": true
+                    },
+                    {
+                        "name": "duration",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "stream duration",
+                        "required": true
+                    },
+                    {
+                        "name": "chunk_size",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "the response delay",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a stream of data"
+                    }
+                }
+            }
+        },
+        "/html": {
+            "get": {
+                "summary": "return an html page",
+                "responses": {
+                    "200": {
+                        "description": "the html page"
+                    }
+                }
+            }
+        },
+        "/robots.txt": {
+            "get": {
+                "summary": "return a robot.txt file",
+                "responses": {
+                    "200": {
+                        "description": "a robot.txt file"
+                    }
+                }
+            }
+        },
+        "/deny": {
+            "get": {
+                "summary": "denied by robots.txt file",
+                "responses": {
+                    "200": {
+                        "description": "denied by robots.txt file"
+                    }
+                }
+            }
+        },
+        "/cache": {
+            "get": {
+                "summary": "returns 200 unless an If-Modified-Since or If-None-Match header is provided, then it returns a 304",
+                "responses": {
+                    "200": {
+                        "description": "a response"
+                    },
+                    "304": {
+                        "description": "a not-modified response"
+                    }
+                }
+            }
+        },
+        "/cache/{n}": {
+            "get": {
+                "summary": "sets a Cache-Control header for n seconds",
+                "parameters": [
+                    {
+                        "name": "n",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "the number of secondes to set the header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a response"
+                    }
+                }
+            }
+        },
+        "/bytes/{n}": {
+            "get": {
+                "summary": "generates n random bytes of binary data, accepts optional seed integer parameter",
+                "parameters": [
+                    {
+                        "name": "n",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "the number of bytes to generate",
+                        "required": true
+                    },
+                    {
+                        "name": "seed",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "the random generator seed",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "binary data"
+                    }
+                }
+            }
+        },
+        "/stream-bytes/{n}": {
+            "get": {
+                "summary": "streams n random bytes of binary data",
+                "parameters": [
+                    {
+                        "name": "n",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "the number of bytes to generate",
+                        "required": true
+                    },
+                    {
+                        "name": "seed",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "the random generator seed"
+                    },
+                    {
+                        "name": "chunk_size",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "the chunk size"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "binary data"
+                    }
+                }
+            }
+        },
+        "/links/{n}": {
+            "get": {
+                "summary": "returns a page containing n HTML links",
+                "parameters": [
+                    {
+                        "name": "n",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "the number of links",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "binary data"
+                    }
+                }
+            }
+        },
+        "/image": {
+            "get": {
+                "summary": "returns a page containing an image based on the Accept header",
+                "responses": {
+                    "200": {
+                        "description": "html with an image"
+                    }
+                }
+            }
+        },
+        "/image/png": {
+            "get": {
+                "summary": "returns a page containing a PNG image",
+                "responses": {
+                    "200": {
+                        "description": "html with a PNG image"
+                    }
+                }
+            }
+        },
+        "/image/jpeg": {
+            "get": {
+                "summary": "returns a page containing a JPEG image",
+                "responses": {
+                    "200": {
+                        "description": "html with a JPEG image"
+                    }
+                }
+            }
+        },
+        "/image/webp": {
+            "get": {
+                "summary": "returns a page containing a WEBP image",
+                "responses": {
+                    "200": {
+                        "description": "html with a WEBP image"
+                    }
+                }
+            }
+        },
+        "/image/svg": {
+            "get": {
+                "summary": "returns a page containing a SVG image",
+                "responses": {
+                    "200": {
+                        "description": "html with a SVG image"
+                    }
+                }
+            }
+        },
+        "/forms/post": {
+            "get": {
+                "summary": "returns a HTML form that submits to /post",
+                "responses": {
+                    "200": {
+                        "description": "HTML form that submits to /post"
+                    }
+                }
+            }
+        },
+        "/xml": {
+            "get": {
+                "summary": "returns some XML",
+                "responses": {
+                    "200": {
+                        "description": "some XML"
                     }
                 }
             }
