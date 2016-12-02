@@ -9,8 +9,115 @@
         "application/json"
     ],
     "paths": {
+        "/ms/version": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return the microservice version number",
+                "responses": {
+                    "200": {
+                        "description": "the version number"
+                    }
+                }
+            }
+        },
+        "/ms/name": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return the microservice name",
+                "responses": {
+                    "200": {
+                        "description": "the name"
+                    }
+                }
+            }
+        },
+        "/ms/readme.md": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return the microservice readme in markdown",
+                "responses": {
+                    "200": {
+                        "description": "the readme in markdown"
+                    }
+                }
+            }
+        },
+        "/ms/readme.html": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return the microservice readme in html",
+                "responses": {
+                    "200": {
+                        "description": "the readme in html"
+                    }
+                }
+            }
+        },
+        "/swagger/swagger.json": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return the microservice Swagger JSON file",
+                "responses": {
+                    "200": {
+                        "description": "the Swagger JSON file"
+                    }
+                }
+            }
+        },
+        "/swagger/#": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return the Swagger-UI page",
+                "responses": {
+                    "200": {
+                        "description": "the Swagger-UI page"
+                    }
+                }
+            }
+        },
+        "/nginx/stats.json": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return stats about Nginx in JSON",
+                "responses": {
+                    "200": {
+                        "description": "the stats about Nginx in JSON"
+                    }
+                }
+            }
+        },
+        "/nginx/stats.html": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return a dashboard displaying the stats from Nginx",
+                "responses": {
+                    "200": {
+                        "description": "the Nginx stats dashboard"
+                    }
+                }
+            }
+        },
         "/ip": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "Return the origin IP",
                 "responses": {
                     "200": {
@@ -21,6 +128,9 @@
         },
         "/user-agent": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "Return the user-agent",
                 "responses": {
                     "200": {
@@ -31,6 +141,9 @@
         },
         "/headers": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "Return the headers",
                 "responses": {
                     "200": {
@@ -41,6 +154,9 @@
         },
         "/get": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "Return get data",
                 "responses": {
                     "200": {
@@ -51,6 +167,9 @@
         },
         "/post": {
             "post": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "Return post data",
                 "responses": {
                     "200": {
@@ -61,6 +180,9 @@
         },
         "/patch": {
             "patch": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "Return patch data",
                 "responses": {
                     "200": {
@@ -71,6 +193,9 @@
         },
         "/put": {
             "put": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "Return put data",
                 "responses": {
                     "200": {
@@ -81,6 +206,9 @@
         },
         "/delete": {
             "delete": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "Return delete data",
                 "responses": {
                     "200": {
@@ -91,6 +219,9 @@
         },
         "/encoding/utf8": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "Return a page containing UTF-8 data",
                 "responses": {
                     "200": {
@@ -101,6 +232,9 @@
         },
         "/deflate": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "Return deflate-encoded data",
                 "responses": {
                     "200": {
@@ -111,6 +245,9 @@
         },
         "/status/{code}": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "Return the given HTTP Status code",
                 "parameters": [
                     {
@@ -130,6 +267,9 @@
         },
         "/response-headers": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "Return the given HTTP response headers",
                 "parameters": [
                     {
@@ -149,6 +289,9 @@
         },
         "/redirect/{n}": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "302 redirects n times",
                 "parameters": [
                     {
@@ -168,7 +311,10 @@
         },
         "/redirect-to": {
             "get": {
-                "summary": "redirects to the given url, with the given status code",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Redirects to the given url, with the given status code",
                 "parameters": [
                     {
                         "name": "url",
@@ -194,6 +340,9 @@
         },
         "/relative-redirect/{n}": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "302 redirects n times",
                 "parameters": [
                     {
@@ -213,6 +362,9 @@
         },
         "/absolute-redirect/{n}": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "302 redirects n times",
                 "parameters": [
                     {
@@ -232,7 +384,10 @@
         },
         "/cookies": {
             "get": {
-                "summary": "returns cookie data",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Returns cookie data",
                 "responses": {
                     "200": {
                         "description": "cookie data"
@@ -242,7 +397,10 @@
         },
         "/cookies/set": {
             "get": {
-                "summary": "set one or more simple cookies",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Set one or more simple cookies",
                 "parameters": [
                     {
                         "name": "name",
@@ -261,7 +419,10 @@
         },
         "/cookies/delete": {
             "get": {
-                "summary": "delete one or more simple cookies",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Delete one or more simple cookies",
                 "parameters": [
                     {
                         "name": "name",
@@ -280,7 +441,10 @@
         },
         "/basic-auth/{user}/{passwd}": {
             "get": {
-                "summary": "challenges HTTPBasic Auth",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Challenges HTTPBasic Auth",
                 "parameters": [
                     {
                         "name": "user",
@@ -306,6 +470,9 @@
         },
         "/hidden-basic-auth/{user}/{passwd}": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "404'd BasicAuth",
                 "parameters": [
                     {
@@ -332,6 +499,9 @@
         },
         "/digest-auth/{qop}/{user}/{passwd}/{algorithm}": {
             "get": {
+                "tags": [
+                    "msa-httpbin"
+                ],
                 "summary": "404'd BasicAuth",
                 "parameters": [
                     {
@@ -372,7 +542,10 @@
         },
         "/digest-auth/{qop}/{user}/{passwd}": {
             "get": {
-                "summary": "challenges HTTP Digest Auth",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Challenges HTTP Digest Auth",
                 "parameters": [
                     {
                         "name": "qop",
@@ -405,7 +578,10 @@
         },
         "/stream/{n}": {
             "get": {
-                "summary": "streams min(n, 100) lines",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Streams min(n, 100) lines",
                 "parameters": [
                     {
                         "name": "n",
@@ -422,9 +598,12 @@
                 }
             }
         },
-        "/deplay/{n}": {
+        "/delay/{n}": {
             "get": {
-                "summary": "delays responding for min(n, 10) seconds",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Delays responding for min(n, 10) seconds",
                 "parameters": [
                     {
                         "name": "n",
@@ -443,7 +622,10 @@
         },
         "/drip": {
             "get": {
-                "summary": "delays responding for min(n, 10) seconds",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Drips data over a duration after an optional initial delay",
                 "parameters": [
                     {
                         "name": "numbytes",
@@ -483,7 +665,10 @@
         },
         "/range/{n}": {
             "get": {
-                "summary": "delays responding for min(n, 10) seconds",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Delays responding for min(n, 10) seconds",
                 "parameters": [
                     {
                         "name": "n",
@@ -516,7 +701,10 @@
         },
         "/html": {
             "get": {
-                "summary": "return an html page",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Return an html page",
                 "responses": {
                     "200": {
                         "description": "the html page"
@@ -526,7 +714,10 @@
         },
         "/robots.txt": {
             "get": {
-                "summary": "return a robot.txt file",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Return a robot.txt file",
                 "responses": {
                     "200": {
                         "description": "a robot.txt file"
@@ -536,7 +727,10 @@
         },
         "/deny": {
             "get": {
-                "summary": "denied by robots.txt file",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Denied by robots.txt file",
                 "responses": {
                     "200": {
                         "description": "denied by robots.txt file"
@@ -546,7 +740,10 @@
         },
         "/cache": {
             "get": {
-                "summary": "returns 200 unless an If-Modified-Since or If-None-Match header is provided, then it returns a 304",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Returns 200 unless an If-Modified-Since or If-None-Match header is provided, then it returns a 304",
                 "responses": {
                     "200": {
                         "description": "a response"
@@ -559,7 +756,10 @@
         },
         "/cache/{n}": {
             "get": {
-                "summary": "sets a Cache-Control header for n seconds",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Sets a Cache-Control header for n seconds",
                 "parameters": [
                     {
                         "name": "n",
@@ -578,7 +778,10 @@
         },
         "/bytes/{n}": {
             "get": {
-                "summary": "generates n random bytes of binary data, accepts optional seed integer parameter",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Generates n random bytes of binary data, accepts optional seed integer parameter",
                 "parameters": [
                     {
                         "name": "n",
@@ -604,7 +807,10 @@
         },
         "/stream-bytes/{n}": {
             "get": {
-                "summary": "streams n random bytes of binary data",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Streams n random bytes of binary data",
                 "parameters": [
                     {
                         "name": "n",
@@ -635,7 +841,10 @@
         },
         "/links/{n}": {
             "get": {
-                "summary": "returns a page containing n HTML links",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Returns a page containing n HTML links",
                 "parameters": [
                     {
                         "name": "n",
@@ -654,7 +863,10 @@
         },
         "/image": {
             "get": {
-                "summary": "returns a page containing an image based on the Accept header",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Returns a page containing an image based on the Accept header",
                 "responses": {
                     "200": {
                         "description": "html with an image"
@@ -664,7 +876,10 @@
         },
         "/image/png": {
             "get": {
-                "summary": "returns a page containing a PNG image",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Returns a page containing a PNG image",
                 "responses": {
                     "200": {
                         "description": "html with a PNG image"
@@ -674,7 +889,10 @@
         },
         "/image/jpeg": {
             "get": {
-                "summary": "returns a page containing a JPEG image",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Returns a page containing a JPEG image",
                 "responses": {
                     "200": {
                         "description": "html with a JPEG image"
@@ -684,7 +902,10 @@
         },
         "/image/webp": {
             "get": {
-                "summary": "returns a page containing a WEBP image",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Returns a page containing a WEBP image",
                 "responses": {
                     "200": {
                         "description": "html with a WEBP image"
@@ -694,7 +915,10 @@
         },
         "/image/svg": {
             "get": {
-                "summary": "returns a page containing a SVG image",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Returns a page containing a SVG image",
                 "responses": {
                     "200": {
                         "description": "html with a SVG image"
@@ -704,7 +928,10 @@
         },
         "/forms/post": {
             "get": {
-                "summary": "returns a HTML form that submits to /post",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Returns a HTML form that submits to /post",
                 "responses": {
                     "200": {
                         "description": "HTML form that submits to /post"
@@ -714,7 +941,10 @@
         },
         "/xml": {
             "get": {
-                "summary": "returns some XML",
+                "tags": [
+                    "msa-httpbin"
+                ],
+                "summary": "Returns some XML",
                 "responses": {
                     "200": {
                         "description": "some XML"

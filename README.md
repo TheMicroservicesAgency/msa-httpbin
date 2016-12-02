@@ -3,15 +3,9 @@
 
 HTTP request & response service originally created by Kenneth Reitz.
 
-## Usage
+## Quick start
 
-To build the microservice Docker image, execute the build script :
-
-```
-./build.sh
-```
-
-Once the container is created, execute it with the following command :
+Execute the microservice container with the following command :
 
 ```
 docker run -ti -p 8080:80 msagency/msa-httpbin
@@ -20,7 +14,7 @@ docker run -ti -p 8080:80 msagency/msa-httpbin
 ## Endpoints
 
 - [/](/) : returns the httpbin original readme, listing all the URLs below :
-- [/ip](/ip) returns Origin IP
+- [/ip](/ip) returns the origin IP
 
 ```
 $ curl http://localhost:8080/ip
@@ -28,7 +22,7 @@ $ curl http://localhost:8080/ip
   "origin": "172.17.0.1"
 }
 ```
-- [/user-agent](/user-agent) returns user-agent
+- [/user-agent](/user-agent) returns the user-agent
 
 ```
 $ curl http://localhost:8080/user-agent
@@ -37,7 +31,7 @@ $ curl http://localhost:8080/user-agent
 }
 ```
 
-- [/headers](/headers) returns header dict
+- [/headers](/headers) returns the header dict
 
 ```
 $ curl http://localhost:8080/headers
