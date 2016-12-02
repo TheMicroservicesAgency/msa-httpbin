@@ -21,7 +21,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/ip",
+				"url": "http://localhost:9901/ip",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -46,7 +46,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/user-agent",
+				"url": "http://localhost:9901/user-agent",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -71,7 +71,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/headers",
+				"url": "http://localhost:9901/headers",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -96,7 +96,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/get",
+				"url": "http://localhost:9901/get",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -121,7 +121,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/post",
+				"url": "http://localhost:9901/post",
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -146,7 +146,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/patch",
+				"url": "http://localhost:9901/patch",
 				"method": "PATCH",
 				"header": [],
 				"body": {
@@ -171,7 +171,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/put",
+				"url": "http://localhost:9901/put",
 				"method": "PUT",
 				"header": [],
 				"body": {
@@ -196,7 +196,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/delete",
+				"url": "http://localhost:9901/delete",
 				"method": "DELETE",
 				"header": [],
 				"body": {
@@ -221,7 +221,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/encoding/utf8",
+				"url": "http://localhost:9901/encoding/utf8",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -246,7 +246,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/deflate",
+				"url": "http://localhost:9901/deflate",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -261,13 +261,13 @@
 			"name": "Return the given HTTP Status code",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8080/status/:code",
+					"raw": "http://localhost:9901/status/:code",
 					"protocol": "http",
 					"auth": {},
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "9901",
 					"path": [
 						"status",
 						":code"
@@ -292,7 +292,7 @@
 		{
 			"name": "Return the given HTTP response headers",
 			"request": {
-				"url": "http://localhost:8080/response-headers?key={{key}}",
+				"url": "http://localhost:9901/response-headers?key={{key}}",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -307,13 +307,13 @@
 			"name": "302 redirects n times",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8080/redirect/:n",
+					"raw": "http://localhost:9901/redirect/:n",
 					"protocol": "http",
 					"auth": {},
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "9901",
 					"path": [
 						"redirect",
 						":n"
@@ -338,7 +338,7 @@
 		{
 			"name": "Redirects to the given url, with the given status code",
 			"request": {
-				"url": "http://localhost:8080/redirect-to?url={{url}}&status_code={{status_code}}",
+				"url": "http://localhost:9901/redirect-to?url={{url}}&status_code={{status_code}}",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -353,13 +353,13 @@
 			"name": "302 redirects n times",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8080/relative-redirect/:n",
+					"raw": "http://localhost:9901/relative-redirect/:n",
 					"protocol": "http",
 					"auth": {},
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "9901",
 					"path": [
 						"relative-redirect",
 						":n"
@@ -385,13 +385,13 @@
 			"name": "302 redirects n times",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8080/absolute-redirect/:n",
+					"raw": "http://localhost:9901/absolute-redirect/:n",
 					"protocol": "http",
 					"auth": {},
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "9901",
 					"path": [
 						"absolute-redirect",
 						":n"
@@ -416,7 +416,7 @@
 		{
 			"name": "Returns cookie data",
 			"request": {
-				"url": "http://localhost:8080/cookies",
+				"url": "http://localhost:9901/cookies",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -430,7 +430,7 @@
 		{
 			"name": "Set one or more simple cookies",
 			"request": {
-				"url": "http://localhost:8080/cookies/set?name={{name}}",
+				"url": "http://localhost:9901/cookies/set?name={{name}}",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -444,7 +444,7 @@
 		{
 			"name": "Delete one or more simple cookies",
 			"request": {
-				"url": "http://localhost:8080/cookies/delete?name={{name}}",
+				"url": "http://localhost:9901/cookies/delete?name={{name}}",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -459,13 +459,13 @@
 			"name": "Challenges HTTPBasic Auth",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8080/basic-auth/:user/:passwd",
+					"raw": "http://localhost:9901/basic-auth/:user/:passwd",
 					"protocol": "http",
 					"auth": {},
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "9901",
 					"path": [
 						"basic-auth",
 						":user",
@@ -496,13 +496,13 @@
 			"name": "404'd BasicAuth",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8080/hidden-basic-auth/:user/:passwd",
+					"raw": "http://localhost:9901/hidden-basic-auth/:user/:passwd",
 					"protocol": "http",
 					"auth": {},
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "9901",
 					"path": [
 						"hidden-basic-auth",
 						":user",
@@ -533,13 +533,13 @@
 			"name": "404'd BasicAuth",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8080/digest-auth/:qop/:user/:passwd/:algorithm",
+					"raw": "http://localhost:9901/digest-auth/:qop/:user/:passwd/:algorithm",
 					"protocol": "http",
 					"auth": {},
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "9901",
 					"path": [
 						"digest-auth",
 						":qop",
@@ -580,13 +580,13 @@
 			"name": "Challenges HTTP Digest Auth",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8080/digest-auth/:qop/:user/:passwd",
+					"raw": "http://localhost:9901/digest-auth/:qop/:user/:passwd",
 					"protocol": "http",
 					"auth": {},
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "9901",
 					"path": [
 						"digest-auth",
 						":qop",
@@ -621,7 +621,7 @@
 		{
 			"name": "Streams 50 lines",
 			"request": {
-				"url": "http://localhost:8080/stream/50",
+				"url": "http://localhost:9901/stream/50",
 				"method": "GET",
 				"header": [
 					{
@@ -641,7 +641,7 @@
 		{
 			"name": "Delays responding for 2 secs",
 			"request": {
-				"url": "http://localhost:8080/delay/2",
+				"url": "http://localhost:9901/delay/2",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -655,7 +655,7 @@
 		{
 			"name": "Drip data over 5 secs",
 			"request": {
-				"url": "http://localhost:8080/drip?numbytes=500&duration=5&delay=1&code=200",
+				"url": "http://localhost:9901/drip?numbytes=500&duration=5&delay=1&code=200",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -669,7 +669,7 @@
 		{
 			"name": "Streams n bytes",
 			"request": {
-				"url": "http://localhost:8080/range/100",
+				"url": "http://localhost:9901/range/100",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -683,7 +683,7 @@
 		{
 			"name": "Return an html page",
 			"request": {
-				"url": "http://localhost:8080/html",
+				"url": "http://localhost:9901/html",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -697,7 +697,7 @@
 		{
 			"name": "Return a robot.txt file",
 			"request": {
-				"url": "http://localhost:8080/robots.txt",
+				"url": "http://localhost:9901/robots.txt",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -711,7 +711,7 @@
 		{
 			"name": "Denied by robots.txt file",
 			"request": {
-				"url": "http://localhost:8080/deny",
+				"url": "http://localhost:9901/deny",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -725,7 +725,7 @@
 		{
 			"name": "Returns 200 unless an If-Modified-Since or If-None-Match header is provided, then it returns a 304",
 			"request": {
-				"url": "http://localhost:8080/cache",
+				"url": "http://localhost:9901/cache",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -739,7 +739,7 @@
 		{
 			"name": "Sets a Cache-Control header for n seconds",
 			"request": {
-				"url": "http://localhost:8080/cache/5",
+				"url": "http://localhost:9901/cache/5",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -753,7 +753,7 @@
 		{
 			"name": "Generates n random bytes of binary data, accepts optional seed integer parameter",
 			"request": {
-				"url": "http://localhost:8080/bytes/2000?seed=75675",
+				"url": "http://localhost:9901/bytes/2000?seed=75675",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -767,7 +767,7 @@
 		{
 			"name": "Streams n random bytes of binary data",
 			"request": {
-				"url": "http://localhost:8080/stream-bytes/2500",
+				"url": "http://localhost:9901/stream-bytes/2500",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -781,7 +781,7 @@
 		{
 			"name": "Returns a page containing n HTML links",
 			"request": {
-				"url": "http://localhost:8080/links/5",
+				"url": "http://localhost:9901/links/5",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -795,7 +795,7 @@
 		{
 			"name": "Returns a page containing an image based on the Accept header",
 			"request": {
-				"url": "http://localhost:8080/image",
+				"url": "http://localhost:9901/image",
 				"method": "GET",
 				"header": [
 					{
@@ -815,7 +815,7 @@
 		{
 			"name": "Returns a page containing a PNG image",
 			"request": {
-				"url": "http://localhost:8080/image/png",
+				"url": "http://localhost:9901/image/png",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -829,7 +829,7 @@
 		{
 			"name": "Returns a page containing a JPEG image",
 			"request": {
-				"url": "http://localhost:8080/image/jpeg",
+				"url": "http://localhost:9901/image/jpeg",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -843,7 +843,7 @@
 		{
 			"name": "Returns a page containing a WEBP image",
 			"request": {
-				"url": "http://localhost:8080/image/webp",
+				"url": "http://localhost:9901/image/webp",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -857,7 +857,7 @@
 		{
 			"name": "Returns a page containing a SVG image",
 			"request": {
-				"url": "http://localhost:8080/image/svg",
+				"url": "http://localhost:9901/image/svg",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -871,7 +871,7 @@
 		{
 			"name": "Returns a HTML form that submits to /post",
 			"request": {
-				"url": "http://localhost:8080/forms/post",
+				"url": "http://localhost:9901/forms/post",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -885,7 +885,7 @@
 		{
 			"name": "Returns some XML",
 			"request": {
-				"url": "http://localhost:8080/xml",
+				"url": "http://localhost:9901/xml",
 				"method": "GET",
 				"header": [],
 				"body": {

@@ -22,7 +22,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/ms/version",
+				"url": "http://localhost:9901/ms/version",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -47,7 +47,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/ms/name",
+				"url": "http://localhost:9901/ms/name",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -72,7 +72,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/ms/readme.md",
+				"url": "http://localhost:9901/ms/readme.md",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -97,7 +97,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/ms/readme.html",
+				"url": "http://localhost:9901/ms/readme.html",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -122,7 +122,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/swagger/swagger.json",
+				"url": "http://localhost:9901/swagger/swagger.json",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -147,7 +147,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/swagger/#",
+				"url": "http://localhost:9901/swagger/#",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -172,7 +172,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/nginx/stats.json",
+				"url": "http://localhost:9901/nginx/stats.json",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -197,7 +197,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:8080/nginx/stats.html",
+				"url": "http://localhost:9901/nginx/stats.html",
 				"method": "GET",
 				"header": [],
 				"body": {
