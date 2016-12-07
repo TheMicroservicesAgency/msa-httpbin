@@ -74,7 +74,7 @@
                 }
             }
         },
-        "/swagger/#": {
+        "/httpbin/swagger/#": {
             "get": {
                 "tags": [
                     "msa-standard"
@@ -113,7 +113,7 @@
                 }
             }
         },
-        "/ip": {
+        "/httpbin/ip": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -126,7 +126,7 @@
                 }
             }
         },
-        "/user-agent": {
+        "/httpbin/user-agent": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -139,7 +139,7 @@
                 }
             }
         },
-        "/headers": {
+        "/httpbin/headers": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -152,7 +152,7 @@
                 }
             }
         },
-        "/get": {
+        "/httpbin/get": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -165,7 +165,7 @@
                 }
             }
         },
-        "/post": {
+        "/httpbin/post": {
             "post": {
                 "tags": [
                     "msa-httpbin"
@@ -178,7 +178,7 @@
                 }
             }
         },
-        "/patch": {
+        "/httpbin/patch": {
             "patch": {
                 "tags": [
                     "msa-httpbin"
@@ -191,7 +191,7 @@
                 }
             }
         },
-        "/put": {
+        "/httpbin/put": {
             "put": {
                 "tags": [
                     "msa-httpbin"
@@ -204,7 +204,7 @@
                 }
             }
         },
-        "/delete": {
+        "/httpbin/delete": {
             "delete": {
                 "tags": [
                     "msa-httpbin"
@@ -217,7 +217,7 @@
                 }
             }
         },
-        "/encoding/utf8": {
+        "/httpbin/encoding/utf8": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -230,7 +230,7 @@
                 }
             }
         },
-        "/deflate": {
+        "/httpbin/deflate": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -243,7 +243,7 @@
                 }
             }
         },
-        "/status/{code}": {
+        "/httpbin/status/{code}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -265,7 +265,7 @@
                 }
             }
         },
-        "/response-headers": {
+        "/httpbin/response-headers": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -287,7 +287,7 @@
                 }
             }
         },
-        "/redirect/{n}": {
+        "/httpbin/redirect/{n}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -309,7 +309,7 @@
                 }
             }
         },
-        "/redirect-to": {
+        "/httpbin/redirect-to": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -338,7 +338,7 @@
                 }
             }
         },
-        "/relative-redirect/{n}": {
+        "/httpbin/relative-redirect/{n}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -360,7 +360,7 @@
                 }
             }
         },
-        "/absolute-redirect/{n}": {
+        "/httpbin/absolute-redirect/{n}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -382,7 +382,7 @@
                 }
             }
         },
-        "/cookies": {
+        "/httpbin/cookies": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -395,7 +395,7 @@
                 }
             }
         },
-        "/cookies/set": {
+        "/httpbin/cookies/set": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -417,7 +417,7 @@
                 }
             }
         },
-        "/cookies/delete": {
+        "/httpbin/cookies/delete": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -439,7 +439,7 @@
                 }
             }
         },
-        "/basic-auth/{user}/{passwd}": {
+        "/httpbin/basic-auth/{user}/{passwd}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -468,7 +468,7 @@
                 }
             }
         },
-        "/hidden-basic-auth/{user}/{passwd}": {
+        "/httpbin/hidden-basic-auth/{user}/{passwd}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -497,7 +497,7 @@
                 }
             }
         },
-        "/digest-auth/{qop}/{user}/{passwd}/{algorithm}": {
+        "/httpbin/digest-auth/{qop}/{user}/{passwd}/{algorithm}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -540,7 +540,7 @@
                 }
             }
         },
-        "/digest-auth/{qop}/{user}/{passwd}": {
+        "/httpbin/digest-auth/{qop}/{user}/{passwd}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -576,7 +576,7 @@
                 }
             }
         },
-        "/stream/{n}": {
+        "/httpbin/stream/{n}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -598,7 +598,7 @@
                 }
             }
         },
-        "/delay/{n}": {
+        "/httpbin/delay/{n}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -620,7 +620,7 @@
                 }
             }
         },
-        "/drip": {
+        "/httpbin/drip": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -663,7 +663,7 @@
                 }
             }
         },
-        "/range/{n}": {
+        "/httpbin/range/{n}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -699,7 +699,7 @@
                 }
             }
         },
-        "/html": {
+        "/httpbin/html": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -712,7 +712,7 @@
                 }
             }
         },
-        "/robots.txt": {
+        "/httpbin/robots.txt": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -725,7 +725,7 @@
                 }
             }
         },
-        "/deny": {
+        "/httpbin/deny": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -738,7 +738,7 @@
                 }
             }
         },
-        "/cache": {
+        "/httpbin/cache": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -754,7 +754,7 @@
                 }
             }
         },
-        "/cache/{n}": {
+        "/httpbin/cache/{n}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -776,7 +776,7 @@
                 }
             }
         },
-        "/bytes/{n}": {
+        "/httpbin/bytes/{n}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -805,7 +805,7 @@
                 }
             }
         },
-        "/stream-bytes/{n}": {
+        "/httpbin/stream-bytes/{n}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -839,7 +839,7 @@
                 }
             }
         },
-        "/links/{n}": {
+        "/httpbin/links/{n}": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -861,7 +861,7 @@
                 }
             }
         },
-        "/image": {
+        "/httpbin/image": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -874,7 +874,7 @@
                 }
             }
         },
-        "/image/png": {
+        "/httpbin/image/png": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -887,7 +887,7 @@
                 }
             }
         },
-        "/image/jpeg": {
+        "/httpbin/image/jpeg": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -900,7 +900,7 @@
                 }
             }
         },
-        "/image/webp": {
+        "/httpbin/image/webp": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -913,7 +913,7 @@
                 }
             }
         },
-        "/image/svg": {
+        "/httpbin/image/svg": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -926,7 +926,7 @@
                 }
             }
         },
-        "/forms/post": {
+        "/httpbin/forms/post": {
             "get": {
                 "tags": [
                     "msa-httpbin"
@@ -939,7 +939,7 @@
                 }
             }
         },
-        "/xml": {
+        "/httpbin/xml": {
             "get": {
                 "tags": [
                     "msa-httpbin"

@@ -1,0 +1,1096 @@
+{
+	"variables": [],
+	"info": {
+		"name": "MSA-HTTPBIN copy",
+		"_postman_id": "8abe8b47-98b6-f94c-0108-885992393603",
+		"description": "HTTP request & response service originally created by Kenneth Reitz.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "httpbin",
+			"description": "Folder for httpbin",
+			"item": [
+				{
+					"name": "Return the Swagger-UI page",
+					"request": {
+						"url": "http://localhost:9901/httpbin/swagger/#",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the origin IP",
+					"request": {
+						"url": "http://localhost:9901/httpbin/ip",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the user-agent",
+					"request": {
+						"url": "http://localhost:9901/httpbin/user-agent",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the headers",
+					"request": {
+						"url": "http://localhost:9901/httpbin/headers",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return get data",
+					"request": {
+						"url": "http://localhost:9901/httpbin/get",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return post data",
+					"request": {
+						"url": "http://localhost:9901/httpbin/post",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return patch data",
+					"request": {
+						"url": "http://localhost:9901/httpbin/patch",
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return put data",
+					"request": {
+						"url": "http://localhost:9901/httpbin/put",
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return delete data",
+					"request": {
+						"url": "http://localhost:9901/httpbin/delete",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a page containing UTF-8 data",
+					"request": {
+						"url": "http://localhost:9901/httpbin/encoding/utf8",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return deflate-encoded data",
+					"request": {
+						"url": "http://localhost:9901/httpbin/deflate",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the given HTTP Status code",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/status/:code",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"status",
+								":code"
+							],
+							"variable": [
+								{
+									"value": "{{code}}",
+									"id": "code"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the given HTTP response headers",
+					"request": {
+						"url": "http://localhost:9901/httpbin/response-headers?key={{key}}",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "302 redirects n times",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/redirect/:n",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"redirect",
+								":n"
+							],
+							"variable": [
+								{
+									"value": "{{n}}",
+									"id": "n"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Redirects to the given url, with the given status code",
+					"request": {
+						"url": "http://localhost:9901/httpbin/redirect-to?url={{url}}&status_code={{status_code}}",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "302 redirects n times",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/relative-redirect/:n",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"relative-redirect",
+								":n"
+							],
+							"variable": [
+								{
+									"value": "{{n}}",
+									"id": "n"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "302 redirects n times",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/absolute-redirect/:n",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"absolute-redirect",
+								":n"
+							],
+							"variable": [
+								{
+									"value": "{{n}}",
+									"id": "n"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Returns cookie data",
+					"request": {
+						"url": "http://localhost:9901/httpbin/cookies",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Set one or more simple cookies",
+					"request": {
+						"url": "http://localhost:9901/httpbin/cookies/set?name={{name}}",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete one or more simple cookies",
+					"request": {
+						"url": "http://localhost:9901/httpbin/cookies/delete?name={{name}}",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Challenges HTTPBasic Auth",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/basic-auth/:user/:passwd",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"basic-auth",
+								":user",
+								":passwd"
+							],
+							"variable": [
+								{
+									"value": "{{user}}",
+									"id": "user"
+								},
+								{
+									"value": "{{passwd}}",
+									"id": "passwd"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "404'd BasicAuth",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/hidden-basic-auth/:user/:passwd",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"hidden-basic-auth",
+								":user",
+								":passwd"
+							],
+							"variable": [
+								{
+									"value": "{{user}}",
+									"id": "user"
+								},
+								{
+									"value": "{{passwd}}",
+									"id": "passwd"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "404'd BasicAuth",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/digest-auth/:qop/:user/:passwd/:algorithm",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"digest-auth",
+								":qop",
+								":user",
+								":passwd",
+								":algorithm"
+							],
+							"variable": [
+								{
+									"value": "{{qop}}",
+									"id": "qop"
+								},
+								{
+									"value": "{{user}}",
+									"id": "user"
+								},
+								{
+									"value": "{{passwd}}",
+									"id": "passwd"
+								},
+								{
+									"value": "{{algorithm}}",
+									"id": "algorithm"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Challenges HTTP Digest Auth",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/digest-auth/:qop/:user/:passwd",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"digest-auth",
+								":qop",
+								":user",
+								":passwd"
+							],
+							"variable": [
+								{
+									"value": "{{qop}}",
+									"id": "qop"
+								},
+								{
+									"value": "{{user}}",
+									"id": "user"
+								},
+								{
+									"value": "{{passwd}}",
+									"id": "passwd"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Streams min(n, 100) lines",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/stream/:n",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"stream",
+								":n"
+							],
+							"variable": [
+								{
+									"value": "{{n}}",
+									"id": "n"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delays responding for min(n, 10) seconds",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/delay/:n",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"delay",
+								":n"
+							],
+							"variable": [
+								{
+									"value": "{{n}}",
+									"id": "n"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Drips data over a duration after an optional initial delay",
+					"request": {
+						"url": "http://localhost:9901/httpbin/drip?numbytes={{numbytes}}&duration={{duration}}&delay={{delay}}&code={{code}}",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delays responding for min(n, 10) seconds",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/range/:n?duration={{duration}}&chunk_size={{chunk_size}}",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"range",
+								":n"
+							],
+							"query": [
+								{
+									"key": "duration",
+									"value": "{{duration}}"
+								},
+								{
+									"key": "chunk_size",
+									"value": "{{chunk_size}}"
+								}
+							],
+							"variable": [
+								{
+									"value": "{{n}}",
+									"id": "n"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return an html page",
+					"request": {
+						"url": "http://localhost:9901/httpbin/html",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a robot.txt file",
+					"request": {
+						"url": "http://localhost:9901/httpbin/robots.txt",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Denied by robots.txt file",
+					"request": {
+						"url": "http://localhost:9901/httpbin/deny",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Returns 200 unless an If-Modified-Since or If-None-Match header is provided, then it returns a 304",
+					"request": {
+						"url": "http://localhost:9901/httpbin/cache",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Sets a Cache-Control header for n seconds",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/cache/:n",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"cache",
+								":n"
+							],
+							"variable": [
+								{
+									"value": "{{n}}",
+									"id": "n"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Generates n random bytes of binary data, accepts optional seed integer parameter",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/bytes/:n?seed={{seed}}",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"bytes",
+								":n"
+							],
+							"query": [
+								{
+									"key": "seed",
+									"value": "{{seed}}"
+								}
+							],
+							"variable": [
+								{
+									"value": "{{n}}",
+									"id": "n"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Streams n random bytes of binary data",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/stream-bytes/:n?seed={{seed}}&chunk_size={{chunk_size}}",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"stream-bytes",
+								":n"
+							],
+							"query": [
+								{
+									"key": "seed",
+									"value": "{{seed}}"
+								},
+								{
+									"key": "chunk_size",
+									"value": "{{chunk_size}}"
+								}
+							],
+							"variable": [
+								{
+									"value": "{{n}}",
+									"id": "n"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Returns a page containing n HTML links",
+					"request": {
+						"url": {
+							"raw": "http:///httpbin/links/:n",
+							"auth": {},
+							"host": [
+								"http"
+							],
+							"path": [
+								":",
+								"",
+								"",
+								"httpbin",
+								"links",
+								":n"
+							],
+							"variable": [
+								{
+									"value": "{{n}}",
+									"id": "n"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Returns a page containing an image based on the Accept header",
+					"request": {
+						"url": "http://localhost:9901/httpbin/image",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Returns a page containing a PNG image",
+					"request": {
+						"url": "http://localhost:9901/httpbin/image/png",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Returns a page containing a JPEG image",
+					"request": {
+						"url": "http://localhost:9901/httpbin/image/jpeg",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Returns a page containing a WEBP image",
+					"request": {
+						"url": "http://localhost:9901/httpbin/image/webp",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Returns a page containing a SVG image",
+					"request": {
+						"url": "http://localhost:9901/httpbin/image/svg",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Returns a HTML form that submits to /post",
+					"request": {
+						"url": "http://localhost:9901/httpbin/forms/post",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Returns some XML",
+					"request": {
+						"url": "http://localhost:9901/httpbin/xml",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms",
+			"description": "Folder for ms",
+			"item": [
+				{
+					"name": "Return the microservice version number",
+					"request": {
+						"url": "http://localhost:9901/ms/version",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the microservice name",
+					"request": {
+						"url": "http://localhost:9901/ms/name",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the microservice readme in markdown",
+					"request": {
+						"url": "http://localhost:9901/ms/readme.md",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the microservice readme in html",
+					"request": {
+						"url": "http://localhost:9901/ms/readme.html",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "nginx",
+			"description": "Folder for nginx",
+			"item": [
+				{
+					"name": "Return stats about Nginx in JSON",
+					"request": {
+						"url": "http://localhost:9901/nginx/stats.json",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a dashboard displaying the stats from Nginx",
+					"request": {
+						"url": "http://localhost:9901/nginx/stats.html",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "swagger",
+			"description": "Folder for swagger",
+			"item": [
+				{
+					"name": "Return the microservice Swagger JSON file",
+					"request": {
+						"url": "http://localhost:9901/swagger/swagger.json",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

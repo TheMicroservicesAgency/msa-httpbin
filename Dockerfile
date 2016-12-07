@@ -10,6 +10,9 @@ RUN apk --update add --virtual build-dependencies python3-dev build-base \
 ADD README.md NAME LICENSE VERSION /opt/ms/
 ADD swagger.json /opt/swagger/swagger.json
 
+# Override the Nginx configuration
+COPY nginx.conf /etc/nginx/nginx.conf
+
 # Copy all the other application files to /opt/ms
 ADD run.sh /opt/ms/
 ADD httpbin /opt/ms/
