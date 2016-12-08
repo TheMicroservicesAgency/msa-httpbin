@@ -74,7 +74,7 @@
                 }
             }
         },
-        "/httpbin/swagger/#": {
+        "/swagger/#": {
             "get": {
                 "tags": [
                     "msa-standard"

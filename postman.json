@@ -1,8 +1,8 @@
 {
 	"variables": [],
 	"info": {
-		"name": "MSA-HTTPBIN copy",
-		"_postman_id": "8abe8b47-98b6-f94c-0108-885992393603",
+		"name": "MSA-HTTPBIN",
+		"_postman_id": "fb5d5abc-9ede-a9d9-21b2-452b92b5e5d7",
 		"description": "HTTP request & response service originally created by Kenneth Reitz.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -12,21 +12,18 @@
 			"description": "Folder for httpbin",
 			"item": [
 				{
-					"name": "Return the Swagger-UI page",
-					"request": {
-						"url": "http://localhost:9901/httpbin/swagger/#",
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
 					"name": "Return the origin IP",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/httpbin/ip",
 						"method": "GET",
@@ -41,6 +38,17 @@
 				},
 				{
 					"name": "Return the user-agent",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/httpbin/user-agent",
 						"method": "GET",
@@ -55,6 +63,17 @@
 				},
 				{
 					"name": "Return the headers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/httpbin/headers",
 						"method": "GET",
@@ -69,6 +88,17 @@
 				},
 				{
 					"name": "Return get data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/httpbin/get",
 						"method": "GET",
@@ -83,6 +113,17 @@
 				},
 				{
 					"name": "Return post data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/httpbin/post",
 						"method": "POST",
@@ -97,6 +138,17 @@
 				},
 				{
 					"name": "Return patch data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/httpbin/patch",
 						"method": "PATCH",
@@ -111,6 +163,17 @@
 				},
 				{
 					"name": "Return put data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/httpbin/put",
 						"method": "PUT",
@@ -167,28 +230,19 @@
 				},
 				{
 					"name": "Return the given HTTP Status code",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 417\"] = responseCode.code === 417;"
+								]
+							}
+						}
+					],
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/status/:code",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"status",
-								":code"
-							],
-							"variable": [
-								{
-									"value": "{{code}}",
-									"id": "code"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/status/417",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -202,7 +256,7 @@
 				{
 					"name": "Return the given HTTP response headers",
 					"request": {
-						"url": "http://localhost:9901/httpbin/response-headers?key={{key}}",
+						"url": "http://localhost:9901/httpbin/response-headers?key=test",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -216,27 +270,7 @@
 				{
 					"name": "302 redirects n times",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/redirect/:n",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"redirect",
-								":n"
-							],
-							"variable": [
-								{
-									"value": "{{n}}",
-									"id": "n"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/redirect/1",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -250,7 +284,7 @@
 				{
 					"name": "Redirects to the given url, with the given status code",
 					"request": {
-						"url": "http://localhost:9901/httpbin/redirect-to?url={{url}}&status_code={{status_code}}",
+						"url": "http://localhost:9901/httpbin/redirect-to?url=/localhost:9901/httpbin/&status_code=200",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -264,61 +298,7 @@
 				{
 					"name": "302 redirects n times",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/relative-redirect/:n",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"relative-redirect",
-								":n"
-							],
-							"variable": [
-								{
-									"value": "{{n}}",
-									"id": "n"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "302 redirects n times",
-					"request": {
-						"url": {
-							"raw": "http:///httpbin/absolute-redirect/:n",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"absolute-redirect",
-								":n"
-							],
-							"variable": [
-								{
-									"value": "{{n}}",
-									"id": "n"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/relative-redirect/1",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -346,7 +326,7 @@
 				{
 					"name": "Set one or more simple cookies",
 					"request": {
-						"url": "http://localhost:9901/httpbin/cookies/set?name={{name}}",
+						"url": "http://localhost:9901/httpbin/cookies/set?name=test",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -360,7 +340,7 @@
 				{
 					"name": "Delete one or more simple cookies",
 					"request": {
-						"url": "http://localhost:9901/httpbin/cookies/delete?name={{name}}",
+						"url": "http://localhost:9901/httpbin/cookies/delete?name=test",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -374,32 +354,7 @@
 				{
 					"name": "Challenges HTTPBasic Auth",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/basic-auth/:user/:passwd",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"basic-auth",
-								":user",
-								":passwd"
-							],
-							"variable": [
-								{
-									"value": "{{user}}",
-									"id": "user"
-								},
-								{
-									"value": "{{passwd}}",
-									"id": "passwd"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/basic-auth/user/passwd",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -413,32 +368,7 @@
 				{
 					"name": "404'd BasicAuth",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/hidden-basic-auth/:user/:passwd",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"hidden-basic-auth",
-								":user",
-								":passwd"
-							],
-							"variable": [
-								{
-									"value": "{{user}}",
-									"id": "user"
-								},
-								{
-									"value": "{{passwd}}",
-									"id": "passwd"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/hidden-basic-auth/user/passwd",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -452,42 +382,7 @@
 				{
 					"name": "404'd BasicAuth",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/digest-auth/:qop/:user/:passwd/:algorithm",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"digest-auth",
-								":qop",
-								":user",
-								":passwd",
-								":algorithm"
-							],
-							"variable": [
-								{
-									"value": "{{qop}}",
-									"id": "qop"
-								},
-								{
-									"value": "{{user}}",
-									"id": "user"
-								},
-								{
-									"value": "{{passwd}}",
-									"id": "passwd"
-								},
-								{
-									"value": "{{algorithm}}",
-									"id": "algorithm"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/digest-auth/auth/user/passwd/MD5",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -501,37 +396,7 @@
 				{
 					"name": "Challenges HTTP Digest Auth",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/digest-auth/:qop/:user/:passwd",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"digest-auth",
-								":qop",
-								":user",
-								":passwd"
-							],
-							"variable": [
-								{
-									"value": "{{qop}}",
-									"id": "qop"
-								},
-								{
-									"value": "{{user}}",
-									"id": "user"
-								},
-								{
-									"value": "{{passwd}}",
-									"id": "passwd"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/digest-auth/auth/user/passwd",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -545,27 +410,7 @@
 				{
 					"name": "Streams min(n, 100) lines",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/stream/:n",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"stream",
-								":n"
-							],
-							"variable": [
-								{
-									"value": "{{n}}",
-									"id": "n"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/stream/5",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -579,27 +424,7 @@
 				{
 					"name": "Delays responding for min(n, 10) seconds",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/delay/:n",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"delay",
-								":n"
-							],
-							"variable": [
-								{
-									"value": "{{n}}",
-									"id": "n"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/delay/2",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -613,7 +438,7 @@
 				{
 					"name": "Drips data over a duration after an optional initial delay",
 					"request": {
-						"url": "http://localhost:9901/httpbin/drip?numbytes={{numbytes}}&duration={{duration}}&delay={{delay}}&code={{code}}",
+						"url": "http://localhost:9901/httpbin/drip?numbytes=500&duration=1&delay=1&code=200",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -627,37 +452,7 @@
 				{
 					"name": "Delays responding for min(n, 10) seconds",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/range/:n?duration={{duration}}&chunk_size={{chunk_size}}",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"range",
-								":n"
-							],
-							"query": [
-								{
-									"key": "duration",
-									"value": "{{duration}}"
-								},
-								{
-									"key": "chunk_size",
-									"value": "{{chunk_size}}"
-								}
-							],
-							"variable": [
-								{
-									"value": "{{n}}",
-									"id": "n"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/range/1?duration=1&chunk_size=1024",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -727,27 +522,7 @@
 				{
 					"name": "Sets a Cache-Control header for n seconds",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/cache/:n",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"cache",
-								":n"
-							],
-							"variable": [
-								{
-									"value": "{{n}}",
-									"id": "n"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/cache/1",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -761,33 +536,7 @@
 				{
 					"name": "Generates n random bytes of binary data, accepts optional seed integer parameter",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/bytes/:n?seed={{seed}}",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"bytes",
-								":n"
-							],
-							"query": [
-								{
-									"key": "seed",
-									"value": "{{seed}}"
-								}
-							],
-							"variable": [
-								{
-									"value": "{{n}}",
-									"id": "n"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/bytes/500?seed=12",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -801,37 +550,7 @@
 				{
 					"name": "Streams n random bytes of binary data",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/stream-bytes/:n?seed={{seed}}&chunk_size={{chunk_size}}",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"stream-bytes",
-								":n"
-							],
-							"query": [
-								{
-									"key": "seed",
-									"value": "{{seed}}"
-								},
-								{
-									"key": "chunk_size",
-									"value": "{{chunk_size}}"
-								}
-							],
-							"variable": [
-								{
-									"value": "{{n}}",
-									"id": "n"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/stream-bytes/500?seed=12&chunk_size=10",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -845,27 +564,7 @@
 				{
 					"name": "Returns a page containing n HTML links",
 					"request": {
-						"url": {
-							"raw": "http:///httpbin/links/:n",
-							"auth": {},
-							"host": [
-								"http"
-							],
-							"path": [
-								":",
-								"",
-								"",
-								"httpbin",
-								"links",
-								":n"
-							],
-							"variable": [
-								{
-									"value": "{{n}}",
-									"id": "n"
-								}
-							]
-						},
+						"url": "http://localhost:9901/httpbin/links/5",
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -982,6 +681,17 @@
 			"item": [
 				{
 					"name": "Return the microservice version number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/ms/version",
 						"method": "GET",
@@ -996,6 +706,17 @@
 				},
 				{
 					"name": "Return the microservice name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/ms/name",
 						"method": "GET",
@@ -1010,6 +731,17 @@
 				},
 				{
 					"name": "Return the microservice readme in markdown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/ms/readme.md",
 						"method": "GET",
@@ -1024,6 +756,17 @@
 				},
 				{
 					"name": "Return the microservice readme in html",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/ms/readme.html",
 						"method": "GET",
@@ -1044,6 +787,17 @@
 			"item": [
 				{
 					"name": "Return stats about Nginx in JSON",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/nginx/stats.json",
 						"method": "GET",
@@ -1058,6 +812,17 @@
 				},
 				{
 					"name": "Return a dashboard displaying the stats from Nginx",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/nginx/stats.html",
 						"method": "GET",
@@ -1078,8 +843,44 @@
 			"item": [
 				{
 					"name": "Return the microservice Swagger JSON file",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": "http://localhost:9901/swagger/swagger.json",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the Swagger-UI page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9901/swagger/#",
 						"method": "GET",
 						"header": [],
 						"body": {
