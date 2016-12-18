@@ -92,4 +92,4 @@ $ curl http://localhost:9901/user-agent
 
 ## About
 
-A project by the [Microservices Agency](https://microservices.agency).
+A project by the [Microservices Agency](http://microservices.agency).
